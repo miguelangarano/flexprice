@@ -34,7 +34,7 @@ WORKDIR /app
 COPY --from=builder /app/server .
 COPY --from=builder /app/migrate .
 COPY --from=builder /app/migrations ./migrations
-COPY --from=builder /app/internal/config ./config
+COPY --from=builder /app/internal/config ./internal/config
 COPY --from=builder /app/assets/fonts ./assets/fonts
 COPY --from=builder /app/assets/typst-templates ./assets/typst-templates
 COPY --from=builder /app/assets/email-templates ./assets/email-templates
